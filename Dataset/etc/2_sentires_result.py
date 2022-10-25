@@ -1,4 +1,4 @@
-#
+#%%
 # =========== checking Sentires Result ==========
 import pickle
 trainpath = './English-Jar/lei/output/Laptop-Train_reviews.pickle'
@@ -18,8 +18,8 @@ with open(trainsent_vis_output, 'w') as f:
     for data in train_sentires:
         if data.get(TRIPLETS, None):
             print("============", file = f)
-            print(f'review id: {data[REVIEWID]}')
-            print(f'text: {data[TEXT]}')
+            print(f'review id: {data[REVIEWID]}', file = f)
+            print(f'text: {data[TEXT]}', file = f)
             for sentence in data[TRIPLETS]:
                 aspect, opinion, text, pol = sentence
                 print(f'\taspect: {aspect}\n\topinion: {opinion}', file = f)
