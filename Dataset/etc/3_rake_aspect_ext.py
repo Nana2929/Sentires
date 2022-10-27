@@ -1,3 +1,4 @@
+#%%
 from rake_nltk import Rake
 from nltk.corpus import wordnet as wn
 from rake_nltk import Metric
@@ -73,10 +74,9 @@ def wn_filter(terms:List[Tuple[int,str]], kargs:Dict):
     print(f'\t# Keeping {keepsize} terms')
     return sbs[:keepsize]
 
-
-
-
-def tokens_alignment(sub_sequence, sequence):
+#%%
+from typing import List
+def v2_tokens_alignment(sub_seq: List, seq: List) -> List[List[int]]:
     """ map sub_sequence to sequence (find its best contiguous position)
     Returns:
         List[List[int]]: the index of sub_sequence:sequence mapping
@@ -87,8 +87,8 @@ def tokens_alignment(sub_sequence, sequence):
     y = 'boost time'
     return: [[0, 5], [1, 6]]
     """
-    row = len(sub_sequence)
-    col = len(sequence)
+    row = len(sub_seq)
+    col = len(seq)
     NULL = -100
 
     alignment_tables = [[0]*(col+1) for _ in range(row+1)]
@@ -97,18 +97,30 @@ def tokens_alignment(sub_sequence, sequence):
 
     for r in range(row-1, -1, -1):
 
-        best_alignment = col + 1
+        ali_v, ali_idx = 0, NULL
 
         for c in range(col-1, -1, -1):
-            if sequence[c] == sub_sequence[r]:
+            if seq[c] == sub_seq[r]:
                 alignment_tables[r][c] = 1 + alignment_tables[r+1][c+1]
 
-                if alignment_tables[r][c] <= best_alignment:
-                    best_alignment = c
-        result[r][-1] = best_alignment
+            if alignment_tables[r][c] > ali_v:
+                ali_v, ali_idx = alignment_tables[r][c], c
+
+        result[r][-1] = ali_idx
     mapped_idx = [i[-1] for i in result]
     if NULL in mapped_idx: return None
     return mapped_idx
+
+# sub_seq = [2009, 2064, 2175, 2119, 3971, 1012, 2057, 2035, 4797, 1012, 2009, 2003, 2054, 2017, 2079, 2007, 2009, 2008, 5609, 1012]
+# seq = [2009, 2064, 2175, 2119, 3971, 1012, 2057, 2035, 4797, 1012, 2009, 2003, 2054, 2017, 2079, 2007, 2009, 2008, 5609, 1012]
+# x = 'boost time is super fast boost time'
+# y = 'time is super'
+# x = x.strip().split()
+# y = y.strip().split()
+# result = v2_tokens_alignment(y, x)
+# print(result)
+#%%
+
 
 
 def seqlabel(keywords:set, sentence:str)->List:
@@ -146,7 +158,7 @@ def seqlabel(keywords:set, sentence:str)->List:
         return
     for keyword in hit_keywords:
         keyword = keyword.strip().split()
-        match = tokens_alignment(sub_sequence = keyword,
+        match = v2_tokens_alignment(sub_sequence = keyword,
                 sequence = sentence)
         if match:
             aspects_field.append(
