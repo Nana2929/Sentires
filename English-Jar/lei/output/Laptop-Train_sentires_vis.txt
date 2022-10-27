@@ -1,0 +1,128 @@
+============
+review id: 10
+text: However, the  multi-touch gestures  and large  tracking area  make having an  external mouse  unnecessary (unless you're  gaming ).
+gold aspects: [{'term': ['multi', '-', 'touch', 'gestures'], 'polarity': 'positive', 'from': 3, 'to': 7}, {'term': ['tracking', 'area'], 'polarity': 'positive', 'from': 9, 'to': 11}, {'term': ['external', 'mouse'], 'polarity': 'neutral', 'from': 14, 'to': 16}, {'term': ['gaming'], 'polarity': 'neutral', 'from': 21, 'to': 22}]
+sentires-predict aspects:
+	aspect: mouse
+	opinion: unnecessary
+	negative
+============
+review id: 29
+text: In desparation, I called their  Customer Service number  and was told that my  warranty  had expired (2 days old) and that the priviledge of  talking to a technician  would cost me ("have your credit card ready").
+gold aspects: [{'term': ['Customer', 'Service', 'number'], 'polarity': 'neutral', 'from': 6, 'to': 9}, {'term': ['warranty'], 'polarity': 'negative', 'from': 14, 'to': 15}, {'term': ['talking', 'to', 'a', 'technician'], 'polarity': 'negative', 'from': 27, 'to': 31}]
+sentires-predict aspects:
+	aspect: card
+	opinion: ready
+	positive
+============
+review id: 218
+text: this is my second one and the same problem, bad  video card   unreliable overall, this will be my second time returning this laptop back to best buy.
+gold aspects: [{'term': ['video', 'card'], 'polarity': 'negative', 'from': 11, 'to': 13}]
+sentires-predict aspects:
+	aspect: card
+	opinion: unreliable
+	negative
+============
+review id: 295
+text: It's fast and has excellent  battery life .
+gold aspects: [{'term': ['battery', 'life'], 'polarity': 'positive', 'from': 6, 'to': 8}]
+sentires-predict aspects:
+	aspect: battery life
+	opinion: excellent
+	positive
+============
+review id: 426
+text: I like those  programs  better than  Office  and you can save your files to be completely compatible with the  Office programs  as well.
+gold aspects: [{'term': ['programs'], 'polarity': 'positive', 'from': 3, 'to': 4}, {'term': ['Office'], 'polarity': 'negative', 'from': 6, 'to': 7}, {'term': ['Office', 'programs'], 'polarity': 'neutral', 'from': 19, 'to': 21}]
+sentires-predict aspects:
+	aspect: programs
+	opinion: better
+	positive
+============
+review id: 493
+text: (I had been a  Windows / Linux  user before this) I love the  size  because the  screen  is big enough for what I use it for (Internet, artwork), and yet it is small enough to be reasonably portable.
+gold aspects: [{'term': ['size'], 'polarity': 'positive', 'from': 15, 'to': 16}, {'term': ['screen'], 'polarity': 'positive', 'from': 18, 'to': 19}, {'term': ['Windows'], 'polarity': 'neutral', 'from': 5, 'to': 6}, {'term': ['Linux'], 'polarity': 'neutral', 'from': 7, 'to': 8}]
+sentires-predict aspects:
+	aspect: screen
+	opinion: big
+	positive
+============
+review id: 721
+text: The big  screen  allows you to enjoy watching movies , pictures and etc!
+gold aspects: [{'term': ['screen'], 'polarity': 'positive', 'from': 2, 'to': 3}]
+sentires-predict aspects:
+	aspect: screen
+	opinion: big
+	positive
+============
+review id: 952
+text: The only problems are the  sound  isnt very loud I have to wear headphones.
+gold aspects: [{'term': ['sound'], 'polarity': 'negative', 'from': 5, 'to': 6}]
+sentires-predict aspects:
+	aspect: isnt
+	opinion: loud
+	negative
+============
+review id: 960
+text: I love its solid  build , light  wt  and excellent  battery life  (for now).
+gold aspects: [{'term': ['build'], 'polarity': 'positive', 'from': 4, 'to': 5}, {'term': ['wt'], 'polarity': 'positive', 'from': 7, 'to': 8}, {'term': ['battery', 'life'], 'polarity': 'positive', 'from': 10, 'to': 12}]
+sentires-predict aspects:
+	aspect: battery life
+	opinion: excellent
+	positive
+============
+review id: 1067
+text: I chose the iBookG4, a laptop that is an attractive computer with a large  screen  big enough to please anyone.
+gold aspects: [{'term': ['screen'], 'polarity': 'positive', 'from': 15, 'to': 16}]
+sentires-predict aspects:
+	aspect: screen
+	opinion: big
+	positive
+============
+review id: 1170
+text: Its small enough where I can take it pretty much anywhere, but still has a big enough  screen  to get everything done.
+gold aspects: [{'term': ['screen'], 'polarity': 'positive', 'from': 18, 'to': 19}]
+sentires-predict aspects:
+	aspect: screen
+	opinion: big
+	positive
+============
+review id: 1251
+text: very convenient when you travel and the  battery life  is excellent...
+gold aspects: [{'term': ['battery', 'life'], 'polarity': 'positive', 'from': 7, 'to': 9}]
+sentires-predict aspects:
+	aspect: battery life
+	opinion: excellent
+	positive
+============
+review id: 1285
+text: However, I love this particular Mac because its very fast, great  size , and has fantastic  features  like the  lighted keyboard  and easy  mouse pad .
+gold aspects: [{'term': ['size'], 'polarity': 'positive', 'from': 13, 'to': 14}, {'term': ['features'], 'polarity': 'positive', 'from': 18, 'to': 19}, {'term': ['lighted', 'keyboard'], 'polarity': 'positive', 'from': 21, 'to': 23}, {'term': ['mouse', 'pad'], 'polarity': 'positive', 'from': 25, 'to': 27}]
+sentires-predict aspects:
+	aspect: keyboard
+	opinion: easy
+	positive
+============
+review id: 1358
+text: The acer one computer that I bought is  17 ince screen  and its hard to find lap top bags for it, but I like the big  screen  on it.
+gold aspects: [{'term': ['17', 'ince', 'screen'], 'polarity': 'neutral', 'from': 8, 'to': 11}, {'term': ['screen'], 'polarity': 'positive', 'from': 27, 'to': 28}]
+sentires-predict aspects:
+	aspect: screen
+	opinion: big
+	positive
+============
+review id: 1423
+text: In all honesty, if someone is looking for a quality laptop and willing to pay a little more money for a normal  sized  laptop than a cheaper and less impressive laptop, then do not buy this computer.
+gold aspects: [{'term': ['sized'], 'polarity': 'neutral', 'from': 23, 'to': 24}]
+sentires-predict aspects:
+	aspect: laptop
+	opinion: willing
+	positive
+============
+review id: 1424
+text: Everything about this computer is easy to  use .
+gold aspects: [{'term': ['use'], 'polarity': 'positive', 'from': 7, 'to': 8}]
+sentires-predict aspects:
+	aspect: computer
+	opinion: easy
+	positive

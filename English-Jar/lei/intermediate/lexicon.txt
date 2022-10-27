@@ -1,0 +1,9 @@
+[-1]	battery life|hard	1	0
+[-1]	battery life|largest	1	0
+[-1]	laptop|bad	1	0
+[-1]	mouse|unnecessary	1	0
+[1]	price|special	1	0
+[1]	programs|clean	1	0
+[1]	programs|easier	1	0
+[1]	programs|quicker	1	0
+[1]	programs|simpler	1	0
